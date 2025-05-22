@@ -4,8 +4,8 @@ async function main() {
   const Marketplace = await hre.ethers.getContractFactory("MarketplaceEscrow");
   const contract = await Marketplace.deploy();
 
-  await contract.waitForDeployment(); // ← use this instead of deployed()
-  console.log("MarketplaceEscrow deployed to:", contract.target); // use contract.target instead of contract.address
+  await contract.waitForDeployment(); 
+  console.log("MarketplaceEscrow deployed to:", contract.target); 
 }
 
 main().catch((error) => {
